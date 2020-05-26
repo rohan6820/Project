@@ -1,0 +1,8 @@
+model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform'))
+model.add(MaxPooling2D((2, 2)))
+
+model.add(Dense(128, activation='relu'))
+model.add(Dense(128, activation='relu'))
+model.fit(trainX, trainY, epochs=10,validation_data=(testX, testY))
