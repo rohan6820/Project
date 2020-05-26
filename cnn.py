@@ -37,5 +37,5 @@ model.fit(trainX, trainY, epochs=10,validation_data=(testX, testY))
 
 _,acc=model.evaluate(testX,testY)
 
-with open("/task/accuracy.txt",'w') as f:
+with open("/pyproject/accuracy.txt",'w') as f:
     f.write(str(ceil(100*acc)))
